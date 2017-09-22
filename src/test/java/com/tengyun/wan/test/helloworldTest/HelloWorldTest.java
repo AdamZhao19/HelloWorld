@@ -1,4 +1,4 @@
-package com.tengyun.wan.test.helloworld.test;
+package com.tengyun.wan.test.helloworldTest;
 
 public class HelloWorldTest {
 
