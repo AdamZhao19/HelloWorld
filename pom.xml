@@ -1,26 +1,36 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.tengyun.wan</groupId>
-  <artifactId>HelloWorld</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <properties>
-  	<COMPILER.VERSION>1.8</COMPILER.VERSION>
-  	<CODE.ENCODING>UTF-8</CODE.ENCODING>
-  </properties>
-  
-  <build>
-  	<plugins>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-compiler-plugin</artifactId>
-  			<version>2.3</version>
-  			<configuration>
-  				<source>${COMPILER.VERSION}</source>
-  				<target>${COMPILER.VERSION}</target>
-  				<encoding>${CODE.ENCODING}</encoding>
-  			</configuration>
-  		</plugin>
-  	</plugins>
-  </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tengyun.wan</groupId>
+	<artifactId>HelloWorld</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<COMPILER.VERSION>1.8</COMPILER.VERSION>
+		<CODE.ENCODING>UTF-8</CODE.ENCODING>
+		<REDIS.VERSION>2.9.0</REDIS.VERSION>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<source>${COMPILER.VERSION}</source>
+					<target>${COMPILER.VERSION}</target>
+					<encoding>${CODE.ENCODING}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${REDIS.VERSION}</version>
+		</dependency>
+	</dependencies>
 </project>
