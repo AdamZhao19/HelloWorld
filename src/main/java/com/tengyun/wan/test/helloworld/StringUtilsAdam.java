@@ -14,20 +14,21 @@ public class StringUtilsAdam
     
     public static void main(String[] args) throws InterruptedException
     {
+        /*// Math中的函数和常量
         System.out.println("π is: " + Math.PI);
         System.out.println("e is: " + Math.E);
         System.out.println("返回两个值中较大的一个： " + Math.max(2, 5));
-        System.out.println(Math.sqrt(5));
+        System.out.println("平方根： " + Math.sqrt(4));*/
         
+        Long cl = System.currentTimeMillis();
+        System.out.println(cl);
+        String sl = cl.toString();
+        System.out.println(sl);
+        System.out.println(sl.substring(sl.length() - 3));
         
-        /*Random r = new Random(); double d = (1 + r.nextDouble()) *
-         * Math.pow(10, 3); String s = String.valueOf(d).substring(1, 3-1);
-         * System.out.println(s);
-         */
-        long l = new Date().getTime();
-        System.out.println(String.valueOf(l));
-        
-        
+        /*// getClass().getSimpleName()方法返回值
+        RedisTest rt = new RedisTest();
+        System.out.println(rt.getClass().getSimpleName());*/
         
     }
 }
