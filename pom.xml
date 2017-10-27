@@ -9,8 +9,47 @@
 		<COMPILER.VERSION>1.8</COMPILER.VERSION>
 		<CODE.ENCODING>UTF-8</CODE.ENCODING>
 		<REDIS.VERSION>2.9.0</REDIS.VERSION>
+		<EREADING.VERSION>V300R003C20B311-SNAPSHOT</EREADING.VERSION>
 	</properties>
 
+	<!-- 仓库和上传的私服配置 -->
+	<repositories>
+		<repository>
+			<id>group_migu</id>
+			<name>group_maven_repos</name>
+			<url>http://211.140.17.101:8031/nexus/content/groups/group_migu</url>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>group_migu</id>
+			<url>http://211.140.17.101:8031/nexus/content/groups/group_migu</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>migu</id>
+			<url>http://211.140.17.101:8031/nexus/content/repositories/migu/</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven_dev</id>
+			<url>http://211.140.17.101:8031/nexus/content/repositories/maven_dev/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<!-- 构建 -->
 	<build>
 		<plugins>
 			<plugin>
@@ -26,11 +65,19 @@
 		</plugins>
 	</build>
 
+	<!-- 依赖 -->
 	<dependencies>
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
 			<version>${REDIS.VERSION}</version>
+		</dependency>
+
+		<!-- 定制端依赖 -->
+		<dependency>
+			<groupId>com.huawei.up</groupId>
+			<artifactId>ereading-up-domain</artifactId>
+			<version>${EREADING.VERSION}</version>
 		</dependency>
 	</dependencies>
 </project>
