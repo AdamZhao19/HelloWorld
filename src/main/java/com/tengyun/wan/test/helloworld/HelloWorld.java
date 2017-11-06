@@ -1,10 +1,16 @@
 package com.tengyun.wan.test.helloworld;
 
-public class HelloWorld {
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Hello World!");
-	}
-
+public class HelloWorld
+{
+    private static Logger logger = Logger.getLogger(HelloWorld.class);
+    
+    public static void main(String[] args)
+    {
+        logger.debug("Enter HelloWorld.main() method.");
+        System.out.println("Hello World!");
+    }
+    
 }

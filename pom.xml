@@ -6,9 +6,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<COMPILER.VERSION>1.8</COMPILER.VERSION>
 		<CODE.ENCODING>UTF-8</CODE.ENCODING>
+		<COMPILER.VERSION>1.8</COMPILER.VERSION>
 		<REDIS.VERSION>2.9.0</REDIS.VERSION>
+		<LOG4J.VERSION>1.2.17</LOG4J.VERSION>
 		<EREADING.VERSION>V300R003C20B311-SNAPSHOT</EREADING.VERSION>
 	</properties>
 
@@ -72,6 +73,18 @@
 			<artifactId>jedis</artifactId>
 			<version>${REDIS.VERSION}</version>
 		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${LOG4J.VERSION}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+
+
 
 		<!-- 定制端依赖 -->
 		<dependency>
