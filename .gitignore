@@ -2,6 +2,8 @@
 *.class
 
 # Log file
+logs
+log
 *.log
 
 # BlueJ files
@@ -29,4 +31,7 @@ hs_err_pid*
 
 # Ant
 lib
+
+#dist
+dist
 
